@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server1": "nodemon server-1/server.js 8001",
+    "server2": "nodemon server-1/server.js 8002",
+    "server3": "nodemon server-1/server.js 8003",
+    "server4": "nodemon server-1/server.js 8004",
+    "server5": "nodemon server-1/server.js 8005",
+    "server6": "nodemon server-1/server.js 8006",
+    "server7": "nodemon server-1/server.js 8007",
+    "server8": "nodemon server-1/server.js 8008",
+    "start": "concurrently \"npm run server1\" \"npm run server2\" \"npm run server3\" \"npm run server4\" \"npm run server5\" \"npm run server6\" \"npm run server7\" \"npm run server8\"\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "backend": "file:",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7",
+    "os": "^0.1.2"
+  }
+}
