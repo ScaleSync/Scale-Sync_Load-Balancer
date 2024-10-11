@@ -66,6 +66,7 @@ The load balancer serves as a gateway that receives client requests, selects the
 - **Express.js**: Web framework used to handle requests.
 - **Axios**: HTTP client used for communicating with backend servers.
 - **JSON**: For configuration management.
+- **Chart.js**: For chart generation.
 
 ## Setup and Installation
 
