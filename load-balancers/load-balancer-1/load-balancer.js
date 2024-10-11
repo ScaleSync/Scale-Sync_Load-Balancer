@@ -9,9 +9,6 @@ app.use(cors());
 
 let algorithm = "Round Robin";
 
-const HIGH_USAGE_THRESHOLD = 75; 
-const LOW_USAGE_THRESHOLD = 25; 
-const MIN_PRIMARY_SERVERS = 4; 
 const connectionsCount = {};
 const responseTime = {};
 
@@ -19,10 +16,18 @@ try {
     const configData = readFileSync("./config.json");
     const config = JSON.parse(configData);
     algorithm = config.algorithm || algorithm;
+    highUsageThreshold = config.highUsageThreshold;
+    lowUsageThreshold = config.lowUsageThreshold;
+    minPrimaryServers = config.minPrimaryServers;
     console.log(`Using load balancing algorithm: ${algorithm}`);
 } catch (error) {
     console.error("Error reading config file:", error);
 }
+
+//From config.json
+const HIGH_USAGE_THRESHOLD = highUsageThreshold || 75; 
+const LOW_USAGE_THRESHOLD = lowUsageThreshold || 25;
+const MIN_PRIMARY_SERVERS = minPrimaryServers || 4; 
 
 let primaryServers = [
     "http://localhost:8001",

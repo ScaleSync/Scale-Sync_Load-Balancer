@@ -1,3 +1,8 @@
 {
-    "algorithm": "Least Response Time"
-}
+    "algorithm": "Round Robin",
+    "highUsageThreshold": 75,
+    "lowUsageThreshold": 25,
+    "minPrimaryServers": 4,
+    "autoscaling": true
+  }
+  
