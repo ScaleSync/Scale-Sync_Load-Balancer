@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Balancer UI</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <style> 
+        * {
+            margin: 15px;
+        }
+        button {
+            padding: 6px;
+        }
+    </style>
+
+    <h1>Load Balancer Algorithm Selection</h1>
+    <a href="cpuUsage.html" target="_blank">Link to dashboard</a><br/><br/><br/>
+
+    <button id="sendRequestButton">Send Request</button>
+
+    <h2>Response:</h2>
+    <div id="responseMessage"></div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
