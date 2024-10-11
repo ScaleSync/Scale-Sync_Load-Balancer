@@ -1,0 +1,23 @@
+{
+  "name": "load-balancers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "load-balancer1": "nodemon load-balancer-1/load-balancer.js",
+    "load-balancer2": "nodemon load-balancer-2/load-balancer.js",
+    "start": "concurrently \"npm run load-balancer1\"  \"npm run load-balancer2\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "load-balancers": "file:",
+    "nodemon": "^3.1.7"
+  }
+}
